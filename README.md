@@ -119,3 +119,53 @@ pygame.quit()
 ```
 
 ![imagen de la bandera](bandera.jpg "imagen de la bandera")
+
+
+## gestion del tiempo y los eventos
+
+### modulo time
+
+- este modulo ofrece varias funciones que permiten cronometrar la sesiòn actual (desde el init()) o pausar, la ejecucion 
+
+- funciones: 
+    - pygame.time.get_ticks
+    - pygame.time.wwaitpygame.time.delay
+
+- onjeto clock
+    - la funcion tick de clock permite actualizar el reloj asociado con el juego actual.
+    - se llama cada vez que se actualiza la pantalla del juego.
+    - permite especificar el numero maximo de fotogramas que se muestran por segundo y por tanto, limitar y controlar la velocidad de ejecucion del juego.
+    - si incertamos en un bucle de juego la siguiente linea, garantizamos que nunca sera mas rapido de 50 fotogramas por segundo: ``` Clock.tick(50) ```
+
+### gestion de eventos
+- hay diferentes formas para que el programa sepa que se ha desencadenado un evento.
+- es ecencial que los proramas puedan conocer inmediatamente las acciones del jugador, atraves del teclado , el maose, un yoystick o cual quier otro periferico.
+
+#### funcion pygame.event.get
+- permite obtener todos los eventos en esppera de ser procesados y que estan disponibles en una cola.
+- si no hay ninguno, entonces se obtiene una colleccion vacia.
+```python
+# usamos un bucle for para recorrer todos los eventos de la collecion obtenida al llamar la colleccion get.
+for event in pygame.get():
+    if event.type == pygame.KEYDOWM:
+        if event.key == pygame.K_escape:
+            PARAR_JUEGO = True
+
+```
+
+#### funcion pygame.event.wait
+- esta funcion espera que ocurra un evento, y en cuanto sucede esta disponible.
+
+```python
+while True:
+    event = pygame.event.wait()
+    if event.type == pygame.QUIT:
+        break
+```
+
+#### funcion pygame.event.poll
+- devuelve solo un evento de los que estan en la cola de espera.
+
+```python
+
+```
