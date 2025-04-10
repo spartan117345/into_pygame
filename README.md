@@ -169,3 +169,9 @@ while True:
 ```python
 
 ```
+
+
+
+
+# crear figuras con el comando pygame.draw
+-     pygame.draw.line(ventana, rojo, (100, 300), (300, 100)): genera una linea
