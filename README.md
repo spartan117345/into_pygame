@@ -173,5 +173,26 @@ while True:
 
 
 
-# crear figuras con el comando pygame.draw
--     pygame.draw.line(ventana, rojo, (100, 300), (300, 100)): genera una linea
+## sonidos en pygame
+- pygame.mixer: modulo que permite la gestion del sonido.
+- music: submodulo que gestiona la musica de fondo.  Necesariamente solo hay uno a la ves
+- sound: objeto de mixer , que se puede instanciar varias veces para usarlo en los efectos del juego.
+
+### archivos de sonido
+- se recomienda usar dos formatos principalmente:
+    - formato WAV (waveform audio file format)
+    - formato abierto y gratuito OGG
+
+### channe (canal) en pygame
+- un juego tiene varios canales de sonido.
+- se puede asignar un sonido al canal nùmero 1 y otro diferente al nùmero 2.
+- entones es posible reproducir  sonidos simultaneamente activando una lectura e diferentes canales.
+
+## Sprites
+- objeto que asocia una ubicacion, una representacion grafica (esta o aquella imagen por ejemplo) y un conjunto de propiedades
+- estas propiedades pueden se ru nombre, un texto, valores booleanos que caracterizan el objeto en cuestion (por ejemplo si el objeto se puede mover o no)
+- una posible traduccion del termino sprite podria ser "imagen-objeto" que se actualiza cln cada iteracion del bucle del juego
+- cuanto mas complejo es el jueg, mas objetos graficos se tienen que gestionar y actualizar lo que puede ser tedioso
+- pygame usa no solo la nocion de sprite sino tambien la nocion de grupos de sprites (group)
+- la nocion de group permite agrupar los objetos del mismo tipo . ejemplo todos los soldados de un ejercito lo que se entiede como una coleccion de instancias de una clase Soldado.
+- un determinado procesamiento se puede aplicar a un conjunto o subconjunto de sprites. por ejemplo cambiar el color de todos los enemigos o hacer invisibles algunos objetos. 
