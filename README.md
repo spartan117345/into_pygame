@@ -280,5 +280,21 @@ while running:
 
 pygame.quit()
 ```
+## sprites
+- un sprite es un objeto, particula, enemigo, etc, de un juego 
+- los sprites sriver para poder hacer que los objetos tengan 
+gitbox o colicion lo cual ayuda a poder crer juegos de todos
+ los tipos y evitar que las cosas traspacen a otras
+
+
+## groups
+
+- se refiere a la función que permite agrupar datos de un DataFrame o Serie 
+según uno o más criterios. Esta agrupación se realiza utilizando una o más 
+columnas como claves y luego se pueden aplicar operaciones de agregación 
+(como sumar, promediar, contar, etc.) a cada grupo. 
+- los grous son grupos de sprites los cuales tienen la misma funcion en el juego,
+paguina u otra aplicacion. los groups sirven para no tener que hacer un mismo 
+codigo para cada sprite de la misma funciòn.
 
 # finalisado el README.md gracias por leerlo.
